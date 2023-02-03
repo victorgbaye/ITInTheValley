@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SubmitStory.css";
 import axios from "axios";
+import Nav from "../Home/Nav";
 
 const SubmitStory = () => {
   const [formData, setFormData] = useState({
@@ -31,6 +32,8 @@ const SubmitStory = () => {
 
 
   return (
+  <>
+    <Nav/>
     <div className="form-container">
       <h1 className="form-header">Submit Story</h1>
       <form onSubmit={handleSubmit}>
@@ -93,6 +96,7 @@ const SubmitStory = () => {
         </button>
       </form>
     </div>
+  </>
   );
 };
 

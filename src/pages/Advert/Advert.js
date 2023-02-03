@@ -68,6 +68,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Advert.css";
+import Nav from "../Home/Nav";
 
 const Advert = () => {
   const [formData, setFormData] = useState({
@@ -108,7 +109,9 @@ const Advert = () => {
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
+    <>
+        <Nav/>
+      <form className="form-container" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Name"
@@ -174,6 +177,7 @@ const Advert = () => {
       />
       <button  className="form-submit-button">Submit</button>
     </form>
+    </>
  
   )
 }
